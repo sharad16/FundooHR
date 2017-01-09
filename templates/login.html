@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="Rectangle">
+                <div class="login-box">
+                    <img src="images/logo.png" />
+                    <div class="login">
+                        <div>Login</div>
+                        <form name="Form" method="post" ng-submit="login()">
+                            <md-input-container class="md-block" id="input1">
+                                <label>Email</label>
+                                <input type="text" name="email" ng-model="user.emailId" ng-pattern="re" required="" />
+
+                            </md-input-container>
+                            <md-input-container class="md-block" id="input2">
+                                <label>Password</label>
+                                <input type="password" name="password" ng-model="user.password" ng-pattern="ps" required="" />
+                            </md-input-container>
+                            <button ng-disabled="!Form.$valid" type="submit" class="md-raised"> Login </button>
+                            <span ng-show="Form.email.$error.pattern" style="color:red;margin-left: 50px;"><br>Please enter correct email address.</span>
+                            <span ng-show="Form.password.$error.pattern"style="color:red;margin-left: 20px;" ><br>Passwd contains Number,alpha and symbol</span>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

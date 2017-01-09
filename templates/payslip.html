@@ -1,0 +1,41 @@
+
+
+<div class="scroll">
+    <div class="rectangle">
+    <div class="left">
+        <h2 >Salary payslip Report</h2>
+
+        <div ng-repeat="checkbox in checkboxes">
+
+
+           <center> <table border="0px;">
+
+
+                <tr>
+
+
+                    <td width="2%"><input id="input12" type="checkbox" name="{{checkbox.name}}" checklist-value="{{checkbox.name}}" ng-click="clearParent()" ng-model="checkbox.selected">
+
+                    <td class="td" align=bottom; width="10%">{{checkbox.name}}</td>
+                    <td class="td" align=bottom; width="10%">{{checkbox.status}}</td>
+                    <td class="td" align=bottom; width="10%">{{checkbox.Company}}</td>
+                </tr>
+
+            </table>
+           </center>
+        </div>
+    </div>
+        <br><br> <input class="Select-All" id="sall" type="checkbox" ng-click="toggleSelect()" />
+        <span class="Select-All"> Select All </span></div><br/>
+
+        <a href=""><button class="button" id="gen" style="margin-bottom: 600px;margin-left: 500px;">Generate</button></a></center>
+    </div>
+
+
+
+</div>
+
+<div ui-view></div>
+
+
+
